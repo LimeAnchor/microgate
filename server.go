@@ -158,6 +158,9 @@ func (lime *LimeServer) SetSecurity(waf, usecors, proxy, recovery bool) {
 }
 
 func (lime *LimeServer) Start() {
+	
+	lime.Server.Handler = lime.Router
+	
 	if err := lime.Server.ListenAndServe(); err != nil {
 		logger.Info("There was an error with the http server",
 			// Structured context as strongly typed Field values.
