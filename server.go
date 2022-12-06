@@ -35,6 +35,7 @@ func Server(port string, readTimeout time.Duration, writeTimeout time.Duration) 
 		WriteTimeout:   writeTimeout * time.Second,
 		MaxHeaderBytes: 1 << 20,
 	}
+	server.Router = gin.Default()
 	return server
 }
 
