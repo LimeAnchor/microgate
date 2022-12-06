@@ -1,4 +1,4 @@
-module microgate
+module github.com/LimeAnchor/microgate
 
 go 1.18
 
