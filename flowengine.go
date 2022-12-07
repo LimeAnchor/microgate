@@ -5,6 +5,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/go-resty/resty/v2"
 	"github.com/workanator/go-floc/v3"
+	"net/http"
 )
 
 var restclient *resty.Client
