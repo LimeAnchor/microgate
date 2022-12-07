@@ -127,5 +127,7 @@ func ProcessHandler(jobs floc.Job) func(ctx *gin.Context) {
 		if err != nil {
 			panic(err)
 		}
+		result := ct.Value("finalresult")
+		ctx.JSON(http.StatusOK, result)
 	}
 }
